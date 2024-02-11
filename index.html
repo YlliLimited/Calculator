@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Calculator</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="calculator">
+            <div class="calcResult"></div>
+
+            <div class="calcParent">
+                <div class="calcChild">
+                    <div
+                        style="
+                            background-color: rgba(52, 82, 41, 0.4);
+                            backdrop-filter: blur(10px);
+                        "
+                        onclick="C()"
+                    >
+                        C
+                    </div>
+                </div>
+                <div class="calcChild">
+                    <div
+                        style="
+                            background-color: rgba(52, 82, 41, 0.4);
+                            backdrop-filter: blur(10px);
+                        "
+                        onclick="percent()"
+                    >
+                        %
+                    </div>
+                </div>
+                <div class="calcChild">
+                    <div
+                        style="
+                            background-color: rgba(52, 82, 41, 0.4);
+                            backdrop-filter: blur(10px);
+                        "
+                        onclick="negNumber()"
+                    >
+                        -/+
+                    </div>
+                </div>
+                <div class="calcChild">
+                    <div
+                        style="
+                            background-color: rgba(197, 255, 176, 0.3);
+                            backdrop-filter: blur(10px);
+                        "
+                        onclick="division()"
+                    >
+                        /
+                    </div>
+                </div>
+
+                <div class="calcChild"><div onclick="addNumber(7)">7</div></div>
+                <div class="calcChild"><div onclick="addNumber(8)">8</div></div>
+                <div class="calcChild"><div onclick="addNumber(9)">9</div></div>
+                <div class="calcChild">
+                    <div
+                        style="
+                            background-color: rgba(197, 255, 176, 0.3);
+                            backdrop-filter: blur(10px);
+                        "
+                        onclick="multiplication()"
+                    >
+                        *
+                    </div>
+                </div>
+
+                <div class="calcChild"><div onclick="addNumber(4)">4</div></div>
+                <div class="calcChild"><div onclick="addNumber(5)">5</div></div>
+                <div class="calcChild"><div onclick="addNumber(6)">6</div></div>
+                <div class="calcChild">
+                    <div
+                        style="
+                            background-color: rgba(197, 255, 176, 0.3);
+                            backdrop-filter: blur(10px);
+                        "
+                        onclick="substraction()"
+                    >
+                        -
+                    </div>
+                </div>
+
+                <div class="calcChild"><div onclick="addNumber(1)">1</div></div>
+                <div class="calcChild"><div onclick="addNumber(2)">2</div></div>
+                <div class="calcChild"><div onclick="addNumber(3)">3</div></div>
+                <div class="calcChild">
+                    <div
+                        style="
+                            background-color: rgba(197, 255, 176, 0.3);
+                            backdrop-filter: blur(10px);
+                        "
+                        onclick="addition()"
+                    >
+                        +
+                    </div>
+                </div>
+
+                <div class="calcChild" style="width: calc(50% - 8px)">
+                    <div style="aspect-ratio: 2/1" onclick="addNumber(0)">
+                        0
+                    </div>
+                </div>
+                <div class="calcChild"><div onclick="decimal()">.</div></div>
+                <div class="calcChild">
+                    <div
+                        style="
+                            background-color: rgba(197, 255, 176, 0.3);
+                            backdrop-filter: blur(10px);
+                        "
+                        onclick="evaluateResult()"
+                    >
+                        =
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- JS -->
+        <script src="app.js"></script>
+    </body>
+</html>
