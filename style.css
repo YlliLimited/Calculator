@@ -22,6 +22,28 @@ body{
   user-select: none;
 }
 
+
+.parent{
+  width: 100%;
+  height: fit-content;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+.child{
+  width: 33.3333333333%;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+
+
 .calculator{
   
   width:400px;
@@ -106,6 +128,78 @@ body{
   transition: box-shadow 0.2s, transform 0.1s, color 0.1s;
 }
 .calcChild div:active{
+  box-shadow:inset 0px 0px 20px rgba(0, 0, 0, 0.1);
+  transform: scale(99%);
+
+  transition: box-shadow 0.2s, transform 0.05s;
+}
+
+
+
+
+
+
+/* Random Number Generator */
+.random{
+  width:400px;
+  height: fit-content;
+  padding: 50px 40px;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+
+  border-radius: 10px;
+
+  color: rgba(255, 255, 255, 0.5);
+}
+.random form label{
+  font-size: 20px;
+}
+.random form input{
+  width: calc(100% - 40px);
+  height: 50px;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.5);
+
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border: none;
+  outline: none;
+
+  padding: 2px 20px;
+
+  border-radius: 5px;
+}
+.random form input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.randResult{
+  width: 100%;
+  height: 60px;
+  font-size: 30px;
+}
+#randButton{
+  background-color: rgba(52, 82, 41, 0.4);
+  border: none;
+  font-size: 20px;
+  padding: 8px 35px;
+  border-radius: 5px;
+
+  color: rgba(255, 255, 255, 0.5);
+
+  margin-top: 20px;
+}
+#randButton:hover{
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  transform: scale(103%);
+  color: rgba(255, 255, 255, 0.9);
+
+  transition: box-shadow 0.2s, transform 0.1s, color 0.1s;
+}
+#randButton:active{
   box-shadow:inset 0px 0px 20px rgba(0, 0, 0, 0.1);
   transform: scale(99%);
 
