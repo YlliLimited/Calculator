@@ -1,3 +1,4 @@
+// Calculator
 let result = '';
 let resultDiv = document.querySelector(".calcResult");
 
