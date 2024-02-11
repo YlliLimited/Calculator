@@ -43,7 +43,18 @@ function calculatorFontSize () {
 function evaluateResult() {
   let evaluation = eval(result);
 
-  if ( screen.width < 800){
+  if (screen.width < 500) {
+    if (evaluation.toString().length > 19){
+      resultDiv.style.fontSize = '5cqw';
+    }
+    else if (evaluation.toString().length > 12) {
+      resultDiv.style.fontSize = '7cqw';
+    }
+    else {
+      resultDiv.style.fontSize = '11cqw';
+    }
+  }
+  else if ( screen.width < 800){
     if (evaluation.toString().length > 12) {
       resultDiv.style.fontSize = '30px';
     }
