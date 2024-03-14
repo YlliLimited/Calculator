@@ -231,6 +231,8 @@ body{
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 
+  overflow: hidden;
+
   margin: 20px 0px;
 
 
@@ -264,8 +266,8 @@ body{
 .primeResult{
   width: 100%;
   height: fit-content;
-  font-size: clamp(14px, 1.5cqw, 100px);
-  margin: 80px 0px;  
+  font-size: clamp(10px, 1.4cqw, 90px);
+  margin: 50px 0px;  
 }
 #primeButton{
   background-color: rgba(52, 82, 41, 0.4);
