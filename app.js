@@ -2,7 +2,7 @@
 
 
 let result = '';
-let resultDiv = document.querySelector(".calcResult");
+const resultDiv = document.querySelector(".calcResult");
 
 
 function calculatorFontSize () {
@@ -135,3 +135,40 @@ function percent () {
 
    resultDiv.innerHTML = result;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Random Number Generator
+
+const rngButton = document.getElementsByClassName('randButton')[0];
+const rngC = document.getElementsByClassName('randButton')[1];
+const rngResult = document.getElementsByClassName('randResult')[0];
+
+rngButton.addEventListener('click', function() {
+  let rngMin = document.getElementById('minNumber').value || 0;
+  let rngMax = document.getElementById('maxNumber').value || 0;
+
+  rngMin = parseInt(rngMin);
+  rngMax = parseInt(rngMax);
+
+  if (rngMin <= rngMax) {
+  rngResult.innerText = Math.round(Math.random() * (rngMax - rngMin)) + rngMin;
+  } else {
+    rngResult.innerText = 'Error';
+  }
+});
+rngC.addEventListener('click', function() {
+  let rngMin = document.getElementById('minNumber').value = '';
+  let rngMax = document.getElementById('maxNumber').value = '';
+  rngResult.innerText = '';
+});

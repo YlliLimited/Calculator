@@ -30,7 +30,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   flex-direction: row;
 }
 .child{
@@ -52,6 +52,8 @@ body{
   background-color: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+
+  margin: 20px 0px;
 
 
   border-radius: 10px;
@@ -117,7 +119,7 @@ body{
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 
-  font-size: 25px;
+  font-size: clamp(15px, 1.7cqw, 1.7cqw);
 }
 
 .calcChild div:hover{
@@ -148,13 +150,15 @@ body{
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 
+  margin: 20px 0px;
+
 
   border-radius: 10px;
 
   color: rgba(255, 255, 255, 0.5);
 }
 .random form label{
-  font-size: 20px;
+  font-size: clamp(16px, 1.6cqw, 110px);
 }
 .random form input{
   width: calc(100% - 40px);
@@ -184,7 +188,7 @@ body{
 #randButton{
   background-color: rgba(52, 82, 41, 0.4);
   border: none;
-  font-size: 20px;
+  font-size: clamp(12px, 1.7cqw, 100px);
   padding: 8px 35px;
   border-radius: 5px;
 
@@ -204,4 +208,63 @@ body{
   transform: scale(99%);
 
   transition: box-shadow 0.2s, transform 0.05s;
+}
+.random h2{
+    font-size: clamp(18px, 1.7cqw, 120px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive */
+@media screen and (max-width: 1499.98px) {
+  .calculator{
+    width: 350px;
+  }
+  .random{
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 1349.98px) {
+  .child{
+    width: 100%;
+
+  }
+  .calculator{
+    width: 400px;
+  }
+  .random{
+    width: 400px;
+  }
+}
+
+@media screen and (max-width:799.98px) {
+  .calculator, .random{
+    width: 300px;
+  }
+  .random form input{
+    height: 40px;
+    font-size: 15px;
+  }
+}
+@media screen and (max-width:499.98px) {
+  .calculator, .random{
+    width: 65vw;
+  }
 }
