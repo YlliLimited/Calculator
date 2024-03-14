@@ -172,3 +172,60 @@ rngC.addEventListener('click', function() {
   let rngMax = document.getElementById('maxNumber').value = '';
   rngResult.innerText = '';
 });
+
+
+
+
+
+
+
+
+
+
+
+
+//Prime number generator
+
+
+const prmButton = document.getElementsByClassName('primeButton')[0];
+const prmC = document.getElementsByClassName('primeButton')[1];
+const prmResult = document.getElementById('primeResult');
+
+prmButton.addEventListener('click', function(){
+  let pnums = [];
+
+  let numbers = document.getElementById('primeTo').value;
+
+  for(let n = 0; n <= numbers; n++){
+    pnums.push(n);
+  } 
+
+  for (let i of pnums){
+     if (i % 2 == 0 && i != 2){
+      pnums.splice(pnums.indexOf(i), 1);
+      continue;
+     } 
+     if (i % 3 == 0 && i != 3){
+       pnums.splice(pnums.indexOf(i), 1);
+       continue;
+     } 
+     if (i % 5 == 0 && i != 5){
+      pnums.splice(pnums.indexOf(i), 1);
+      continue;
+     } 
+     if (i % 7 == 0 && i != 7){
+      pnums.splice(pnums.indexOf(i), 1);
+      continue;
+     } 
+     if (i % 11 == 0 && i != 11){
+      pnums.splice(pnums.indexOf(i), 1);
+      continue;
+     } 
+     if (i % 13 == 0 && i != 13){
+      pnums.splice(pnums.indexOf(i), 1);
+      continue;
+     }
+   }
+
+   console.log(pnums);
+});
