@@ -197,35 +197,17 @@ prmButton.addEventListener('click', function(){
   let numbers = document.getElementById('primeTo').value;
 
   for(let n = 0; n <= numbers; n++){
-    pnums.push(n);
+    if (n % 2 != 0 && n % 3 != 0 && n % 5 != 0 && n % 7 != 0 && n % 11 != 0 && n % 13 != 0){
+      pnums.push(n);
+    } if (n == 2 || n == 3 || n == 5 || n == 7 || n == 11 || n == 13){
+      pnums.push(n);
+    }
   } 
 
-  for (let i of pnums){
-     if (i % 2 == 0 && i != 2){
-      pnums.splice(pnums.indexOf(i), 1);
-      continue;
-     } 
-     if (i % 3 == 0 && i != 3){
-       pnums.splice(pnums.indexOf(i), 1);
-       continue;
-     } 
-     if (i % 5 == 0 && i != 5){
-      pnums.splice(pnums.indexOf(i), 1);
-      continue;
-     } 
-     if (i % 7 == 0 && i != 7){
-      pnums.splice(pnums.indexOf(i), 1);
-      continue;
-     } 
-     if (i % 11 == 0 && i != 11){
-      pnums.splice(pnums.indexOf(i), 1);
-      continue;
-     } 
-     if (i % 13 == 0 && i != 13){
-      pnums.splice(pnums.indexOf(i), 1);
-      continue;
-     }
-   }
+  prmResult.textContent = pnums.join(', ');
+});
 
-   console.log(pnums);
+prmC.addEventListener('click', function(){
+  prmResult.textContent = '';
+  document.getElementById('primeTo').value = '';
 });
