@@ -166,7 +166,7 @@ body{
   font-size: 18px;
   color: rgba(255, 255, 255, 0.5);
 
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color:rgba(52, 82, 41, 0.4);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 
@@ -176,6 +176,8 @@ body{
   padding: 2px 20px;
 
   border-radius: 5px;
+
+  margin: 10px 0px;
 }
 .random form input[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -186,7 +188,7 @@ body{
   font-size: 30px;
 }
 #randButton{
-  background-color: rgba(52, 82, 41, 0.4);
+  background-color: rgba(197, 255, 176, 0.3);
   border: none;
   font-size: clamp(12px, 1.7cqw, 100px);
   padding: 8px 35px;
@@ -249,7 +251,7 @@ body{
   font-size: 18px;
   color: rgba(255, 255, 255, 0.5);
 
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(197, 255, 176, 0.3);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 
@@ -259,6 +261,8 @@ body{
   padding: 2px 20px;
 
   border-radius: 5px;
+
+  margin: 10px 0px;
 }
 .prime form input[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -267,7 +271,7 @@ body{
   width: 100%;
   height: fit-content;
   font-size: clamp(10px, 1.4cqw, 90px);
-  margin: 50px 0px;  
+  margin: 60px 0px;  
 }
 #primeButton{
   background-color: rgba(52, 82, 41, 0.4);
