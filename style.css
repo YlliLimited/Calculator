@@ -49,9 +49,12 @@ body{
   width:400px;
   height: fit-content;
   padding: 50px 40px;
-  background-color: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.07);
+
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  box-shadow: inset 0px 0px 5px rgba(255, 255, 255, 0.08);
 
   margin: 20px 0px;
 
@@ -116,25 +119,25 @@ body{
 
   color: rgba(255, 255, 255, 0.5);
 
-  background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background-color:rgba(0, 0, 0, 0.15);
+
+  box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.35), 0px 0px 15px rgba(255, 255, 255, 0.02);
 
   font-size: clamp(15px, 1.7cqw, 1.7cqw);
+
+  transition: box-shadow 0.2s, color 0.1s;
 }
 
 .calcChild div:hover{
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-  transform: scale(103%);
   color: rgba(255, 255, 255, 0.9);
+  box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0.35), 0px 0px 15px rgba(0, 0, 0, 0.1);
 
-  transition: box-shadow 0.2s, transform 0.1s, color 0.1s;
+  transition: color 0.1s, box-shadow 0.3s;
 }
 .calcChild div:active{
-  box-shadow:inset 0px 0px 20px rgba(0, 0, 0, 0.1);
-  transform: scale(99%);
+  box-shadow: inset 0px 0px 1px rgba(0, 0, 0, 0.35), 0px 0px 10px rgba(255, 255, 255, 0.02);
 
-  transition: box-shadow 0.2s, transform 0.05s;
+  transition:box-shadow 0.1s;
 }
 
 
@@ -154,12 +157,14 @@ body{
   width:400px;
   height: fit-content;
   padding: 50px 40px;
-  background-color: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.07);
+
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  box-shadow: inset 0px 0px 5px rgba(255, 255, 255, 0.08), 0px 0px 30px black;
 
   margin: 20px 0px;
-
 
   border-radius: 10px;
 
@@ -173,9 +178,9 @@ body{
   height: 50px;
   font-size: 18px;
   color: rgba(255, 255, 255, 0.5);
-  background-color:rgba(52, 82, 41, 0.4);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background-color:rgba(0, 0, 0, 0.15);
+
+  box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.35), 0px 0px 15px rgba(255, 255, 255, 0.02);
 
   border: none;
   outline: none;
@@ -196,28 +201,32 @@ body{
   margin: 60px 0px;  
 }
 #toolButton{
-  background-color: rgba(197, 255, 176, 0.3);
   border: none;
   font-size: clamp(12px, 1.7cqw, 100px);
   padding: 8px 35px;
   border-radius: 5px;
 
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.4);
 
   margin-top: 20px;
+
+  background-color: transparent;
+
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  box-shadow: inset 0px 0px 5px rgba(255, 255, 255, 0.1),0px 0px 15px rgba(0, 0, 0, 0.15);
 }
 #toolButton:hover{
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
   transform: scale(103%);
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.5);
 
-  transition: box-shadow 0.2s, transform 0.1s, color 0.1s;
+  transition: transform 0.1s, color 0.1s;
 }
 #toolButton:active{
-  box-shadow:inset 0px 0px 20px rgba(0, 0, 0, 0.1);
   transform: scale(99%);
 
-  transition: box-shadow 0.2s, transform 0.05s;
+  transition: transform 0.05s;
 }
 
 
