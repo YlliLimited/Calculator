@@ -154,7 +154,7 @@ const rngButton = document.getElementsByClassName('randButton')[0];
 const rngC = document.getElementsByClassName('randButton')[1];
 const rngResult = document.getElementsByClassName('randResult')[0];
 
-rngButton.addEventListener('click', function() {
+rngButton.addEventListener('mouseup', function() {
   let rngMin = document.getElementById('minNumber').value || 0;
   let rngMax = document.getElementById('maxNumber').value || 0;
 
@@ -167,7 +167,7 @@ rngButton.addEventListener('click', function() {
     rngResult.innerText = 'Error';
   }
 });
-rngC.addEventListener('click', function() {
+rngC.addEventListener('mouseup', function() {
   let rngMin = document.getElementById('minNumber').value = '';
   let rngMax = document.getElementById('maxNumber').value = '';
   rngResult.innerText = '';
@@ -191,7 +191,7 @@ const prmButton = document.getElementsByClassName('primeButton')[0];
 const prmC = document.getElementsByClassName('primeButton')[1];
 const prmResult = document.getElementById('primeResult');
 
-prmButton.addEventListener('click', function(){
+prmButton.addEventListener('mouseup', function(){
   let pnums = [];
 
   let numbers = document.getElementById('primeTo').value;
@@ -207,7 +207,7 @@ prmButton.addEventListener('click', function(){
   prmResult.textContent = pnums.join(', ');
 });
 
-prmC.addEventListener('click', function(){
+prmC.addEventListener('mouseup', function(){
   prmResult.textContent = '';
   document.getElementById('primeTo').value = '';
 });
@@ -224,27 +224,30 @@ const variButton = document.getElementsByClassName('variationsButton')[0];
 const variC = document.getElementsByClassName('variationsButton')[1];
 const variResult = document.getElementById('variationsResult');
 
-variButton.addEventListener('click', function(){
+variButton.addEventListener('mouseup', function(){
 
   let k = parseInt(document.getElementById('vClass').value);
   let n = parseInt(document.getElementById('vNums').value);
 
-  let nF = 1;
-  let knF = 1;
+  if (n >= k) {
+    let nF = 1;
+    let knF = 1;
 
-  for (let i = 1; i<=n; i++){
-    nF = nF * i
+    for (let i = 1; i<=n; i++){
+      nF = nF * i
+    }
+
+    for (let j = 1; j <= (n - k); j++){
+      knF = knF * j
+    }
+
+    variResult.textContent = nF / knF;
+  } else {
+    variResult.textContent = 'Error';
   }
-
-  for (let j = 1; j <= (n - k); j++){
-    knF = knF * j
-  }
-
-  variResult.textContent = nF / knF;
-  
 });
 
-variC.addEventListener('click', function(){
+variC.addEventListener('mouseup', function(){
   variResult.textContent = '';
   document.getElementById('vClass').value = '';
   document.getElementById('vNums').value = '';
@@ -266,9 +269,7 @@ const binButton = document.getElementsByClassName('binomialButton')[0];
 const binC = document.getElementsByClassName('binomialButton')[1];
 
 
-
-
-binButton.addEventListener('click', function(){
+binButton.addEventListener('mouseup', function(){
 
   let layer = parseInt(document.getElementById('exponentB').value) + 1;
 
@@ -368,9 +369,7 @@ binButton.addEventListener('click', function(){
     binRez.textContent = 'Error';
   }
 });
-
-
-binC.addEventListener('click', function(){
+binC.addEventListener('mouseup', function(){
   binRez.textContent = '';
   document.getElementById('exponentB').value = '';
 });
