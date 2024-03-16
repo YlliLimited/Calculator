@@ -272,6 +272,7 @@ binButton.addEventListener('click', function(){
 
   let layer = parseInt(document.getElementById('exponentB').value) + 1;
 
+  if (document.getElementById('exponentB').value >= 0) {
     let lastPascalNums = [];
 
     for (let i = 0; i <= layer - 1; i++) {
@@ -361,7 +362,9 @@ binButton.addEventListener('click', function(){
     formula = formula.join(" + ");
 
     binRez.innerHTML = formula;
-
+  } else{
+    binRez.textContent = 'Error';
+  }
 });
 
 
