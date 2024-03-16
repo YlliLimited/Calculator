@@ -211,3 +211,41 @@ prmC.addEventListener('click', function(){
   prmResult.textContent = '';
   document.getElementById('primeTo').value = '';
 });
+
+
+
+
+
+
+
+//Variations calculatior
+
+const variButton = document.getElementsByClassName('variationsButton')[0];
+const variC = document.getElementsByClassName('variationsButton')[1];
+const variResult = document.getElementById('variationsResult');
+
+variButton.addEventListener('click', function(){
+
+  let k = parseInt(document.getElementById('vClass').value);
+  let n = parseInt(document.getElementById('vNums').value);
+
+  let nF = 1;
+  let knF = 1;
+
+  for (let i = 1; i<=n; i++){
+    nF = nF * i
+  }
+
+  for (let j = 1; j <= (n - k); j++){
+    knF = knF * j
+  }
+
+  variResult.textContent = nF / knF;
+  
+});
+
+variC.addEventListener('click', function(){
+  variResult.textContent = '';
+  document.getElementById('vClass').value = '';
+  document.getElementById('vNums').value = '';
+});

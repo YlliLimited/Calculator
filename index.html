@@ -11,7 +11,7 @@
     <body>
         <div class="parent">
             <div class="child">
-                <div class="random">
+                <div class="random smallTool">
                     <h2>Random Number Generator</h2>
                     <div class="randResult"></div>
                     <form>
@@ -40,6 +40,42 @@
                             type="button"
                             id="randButton"
                             class="randButton"
+                            style="margin-left: 0.2cqw"
+                        >
+                            C
+                        </button>
+                    </form>
+                </div>
+
+                <div class="variations smallTool">
+                    <h2>Number of Variations</h2>
+                    <div id="variationsResult"></div>
+                    <form>
+                        <label>Class</label><br />
+                        <input
+                            type="number"
+                            id="vClass"
+                            placeholder="k"
+                        /><br />
+
+                        <label>Number of elements</label><br />
+                        <input
+                            type="number"
+                            id="vNums"
+                            placeholder="n"
+                        /><br />
+
+                        <button
+                            type="button"
+                            id="variationsButton"
+                            class="variationsButton"
+                        >
+                            Generate
+                        </button>
+                        <button
+                            type="button"
+                            id="variationsButton"
+                            class="variationsButton"
                             style="margin-left: 0.2cqw"
                         >
                             C
@@ -186,7 +222,7 @@
                 </div>
             </div>
             <div class="child">
-                <div class="prime">
+                <div class="prime smallTool">
                     <h2>Prime Number Generator</h2>
                     <div class="primeResult" id="primeResult"></div>
                     <form>
