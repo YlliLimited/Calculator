@@ -3,7 +3,7 @@
 }
 
 body{
-  background-image: url(plants.jpg);
+  background-image: url(bg.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -54,7 +54,7 @@ body{
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
 
-  box-shadow: inset 0px 0px 5px rgba(255, 255, 255, 0.08);
+  box-shadow: box-shadow: inset 0px 0px 5px rgba(255, 255, 255, 0.08), 0px 0px 20px rgba(0, 0, 0, 0.1);;
 
   margin: 20px 0px;
 
@@ -152,6 +152,7 @@ body{
 /*Small Tool*/
 .smallTool h2{
   font-size: clamp(18px, 1.7cqw, 120px);
+  margin: 0px;
 }
 .smallTool{
   width:400px;
@@ -162,7 +163,7 @@ body{
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
 
-  box-shadow: inset 0px 0px 5px rgba(255, 255, 255, 0.08), 0px 0px 30px black;
+  box-shadow: inset 0px 0px 5px rgba(255, 255, 255, 0.08), 0px 0px 20px rgba(0, 0, 0, 0.1);
 
   margin: 20px 0px;
 
