@@ -54,7 +54,7 @@ body{
   
   width:440px;
   height: fit-content;
-  padding: clamp(25px, 2.8cqw, 10000px);
+  padding: clamp(25px, 2.7cqw, 10000px);
   background-color: rgba(255, 255, 255, 0.07);
 
   backdrop-filter: blur(15px);
@@ -163,7 +163,7 @@ body{
 .smallTool{
   width:440px;
   height: fit-content;
-  padding: clamp(25px, 2.8cqw, 10000px);
+  padding: clamp(25px, 2.7cqw, 10000px);
   background-color: rgba(255, 255, 255, 0.07);
 
   backdrop-filter: blur(15px);
