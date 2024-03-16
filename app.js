@@ -249,3 +249,117 @@ variC.addEventListener('click', function(){
   document.getElementById('vClass').value = '';
   document.getElementById('vNums').value = '';
 });
+
+
+
+
+
+
+
+
+
+
+//Binom Formula
+
+const binRez = document.getElementById('binomialResult');
+const binButton = document.getElementsByClassName('binomialButton')[0];
+const binC = document.getElementsByClassName('binomialButton')[1];
+
+
+
+
+binButton.addEventListener('click', function(){
+
+  let layer = parseInt(document.getElementById('exponentB').value) + 1;
+
+    let lastPascalNums = [];
+
+    for (let i = 0; i <= layer - 1; i++) {
+        currentPascalNums = [];
+
+        if (i == 0) {
+            currentPascalNums = [1];
+            lastPascalNums = currentPascalNums;
+        } else {
+            if (lastPascalNums.length > 1) {
+                currentPascalNums.push(i);
+
+                if (lastPascalNums.length > 2) {
+                    if (lastPascalNums.length > 3) {
+                        for (let j = 0; j < i - 3; j++) {
+                            let num1 = lastPascalNums[1 + j];
+                            let num2 = lastPascalNums[2 + j];
+
+                            currentPascalNums.push(num1 + num2);
+
+                            let pascalNewVals = currentPascalNums.slice(
+                                2,
+                                currentPascalNums.length
+                            );
+                            pascalNewVals.reverse();
+
+                            currentPascalNums.join(pascalNewVals);
+                        }
+                    }
+
+                    currentPascalNums.push(i);
+                }
+            }
+
+            currentPascalNums.push(1);
+            currentPascalNums.unshift(1);
+
+            lastPascalNums = currentPascalNums;
+        }
+    }
+
+    let a = [];
+    let b = [];
+    let ab = [];
+
+    for (let i = 0; i <= layer -1 ; i++) {
+        let iStr = i.toString();
+
+        if (i != 1){
+          var reza = "a" + iStr.sup();
+          var rezb = "b" + iStr.sup();
+        } else{
+          var reza = "a";
+          var rezb = "b";
+        }
+  
+        a.push(reza);
+        b.push(rezb);
+    }
+    a = a.reverse();
+
+    let j = 0;
+    for (let as of a) {
+        if (j == 0) {
+            ab.push(as);
+        } else if (j == layer - 1) {
+            ab.push(b[j]);
+        } else {
+            ab.push(as + b[j]);
+        }
+
+        j++;
+    }
+
+    let formula = [];
+    let k = 0;
+    for (let n of currentPascalNums) {
+
+      if (n != 1) {
+        formula.push(n + ab[k]);
+      } else{
+      formula.push(ab[k]);
+      }
+
+      k++;
+    }
+    formula = formula.join(" + ");
+
+    binRez.innerHTML = formula;
+
+});

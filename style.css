@@ -267,7 +267,7 @@ body{
 .prime form input[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
-.primeResult{
+.primeResult, .binomialResult {
   width: 100%;
   height: fit-content;
   font-size: clamp(10px, 1.4cqw, 90px);
