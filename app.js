@@ -363,3 +363,9 @@ binButton.addEventListener('click', function(){
     binRez.innerHTML = formula;
 
 });
+
+
+binC.addEventListener('click', function(){
+  binRez.textContent = '';
+  document.getElementById('exponentB').value = '';
+});
